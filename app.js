@@ -124,7 +124,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+  var a = testArray[0];
+  var b = testArray[1];
+  var c = testArray[2];
+  var times = multiply(a, b);
+  console.log('times', times[0]);
+  var totalTimes = multiply(times[0], c);
+  console.log(totalTimes);
+  var string = 'The numbers ' + a + ',' + b + ',' + c + ' have a product of ' + totalTimes[0] + '.';
+  console.log(string);
+  return [totalTimes, string];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
